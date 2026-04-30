@@ -4,14 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Aziz Group of Schools</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <style>
-:root{--gold:#C9922A;--gold-light:#E8B84B;--navy:#0D1B3E;--navy-mid:#162447;--navy-light:#1E3460;--cream:#FAF6EE;--white:#FFFFFF;--text-dark:#0D1B3E;--text-mid:#3D4F6B;--text-light:#8A96A8;--shadow:0 20px 60px rgba(13,27,62,0.15);--shadow-hover:0 30px 80px rgba(13,27,62,0.25);}
+:root{--gold:#f59e0b;--gold-light:#fbbf24;--navy:#7c3aed;--navy-mid:#a855f7;--navy-light:#06b6d4;--cream:#f8f7ff;--white:#FFFFFF;--text-dark:#1e1b4b;--text-mid:#6b5d8f;--text-light:#9ca3af;--shadow:0 20px 60px rgba(124,58,237,0.15);--shadow-hover:0 30px 80px rgba(124,58,237,0.25);}
 *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
 body{font-family:'Outfit',sans-serif;background:var(--cream);color:var(--text-dark);overflow-x:hidden;}
-nav{position:fixed;top:0;width:100%;z-index:1000;background:rgba(13,27,62,0.97);backdrop-filter:blur(12px);border-bottom:2px solid var(--gold);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:72px;}
+nav{position:fixed;top:0;width:100%;z-index:1000;background:linear-gradient(135deg,rgba(124,58,237,0.95),rgba(6,182,212,0.05));backdrop-filter:blur(12px);border-bottom:1px solid rgba(124,58,237,0.3);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:72px;}
 .nav-logo{display:flex;align-items:center;gap:14px;text-decoration:none;}
 .nav-logo .emblem{width:46px;height:46px;background:linear-gradient(135deg,var(--gold),var(--gold-light));border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:900;font-size:20px;color:var(--navy);box-shadow:0 0 20px rgba(201,146,42,0.4);}
 .nav-logo .logo-text{color:var(--white);}
@@ -20,10 +21,10 @@ nav{position:fixed;top:0;width:100%;z-index:1000;background:rgba(13,27,62,0.97);
 .nav-links{display:flex;gap:32px;list-style:none;}
 .nav-links a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:14px;font-weight:500;letter-spacing:0.5px;transition:color 0.2s;padding-bottom:2px;border-bottom:2px solid transparent;}
 .nav-links a:hover{color:var(--gold-light);border-bottom-color:var(--gold-light);}
-.nav-admin-btn{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);border:none;padding:9px 20px;border-radius:6px;font-weight:600;font-size:13px;cursor:pointer;transition:all 0.2s;font-family:'Outfit',sans-serif;}
-.nav-admin-btn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(201,146,42,0.5);}
-.hero{min-height:100vh;background:linear-gradient(160deg,var(--navy) 0%,var(--navy-mid) 50%,#0A2240 100%);display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;padding-top:72px;}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(201,146,42,0.12) 0%,transparent 70%),radial-gradient(circle at 10% 80%,rgba(201,146,42,0.08) 0%,transparent 50%);}
+.nav-admin-btn{background:linear-gradient(135deg,var(--navy),var(--navy-mid));color:white;border:none;padding:10px 16px;border-radius:100px;font-weight:600;font-size:16px;cursor:pointer;transition:all 0.3s;font-family:'Outfit',sans-serif;box-shadow:0 0 20px rgba(124,58,237,0.3);}
+.nav-admin-btn:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(124,58,237,0.6);}
+.hero{min-height:100vh;background:linear-gradient(135deg,#1e1b4b 0%,#2e1065 50%,#0369a1 100%);display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;padding-top:72px;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(124,58,237,0.12) 0%,transparent 70%),radial-gradient(circle at 10% 80%,rgba(6,182,212,0.08) 0%,transparent 50%);}
 .hero-pattern{position:absolute;inset:0;opacity:0.04;background-image:repeating-linear-gradient(45deg,var(--gold) 0px,var(--gold) 1px,transparent 1px,transparent 40px);}
 .hero-content{position:relative;z-index:1;max-width:800px;padding:0 20px;}
 .hero-badge{display:inline-block;padding:6px 18px;background:rgba(201,146,42,0.15);border:1px solid rgba(201,146,42,0.4);border-radius:30px;color:var(--gold-light);font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:28px;animation:fadeUp 0.8s 0.1s both;}
@@ -31,8 +32,8 @@ nav{position:fixed;top:0;width:100%;z-index:1000;background:rgba(13,27,62,0.97);
 .hero h1 span{color:var(--gold-light);display:block;}
 .hero p{font-size:18px;color:rgba(255,255,255,0.7);margin:24px 0 40px;line-height:1.7;animation:fadeUp 0.8s 0.3s both;}
 .hero-cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;animation:fadeUp 0.8s 0.4s both;}
-.btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);padding:14px 32px;border:none;border-radius:8px;font-weight:700;font-size:15px;cursor:pointer;text-decoration:none;display:inline-block;transition:all 0.3s;box-shadow:0 8px 30px rgba(201,146,42,0.35);font-family:'Outfit',sans-serif;}
-.btn-primary:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(201,146,42,0.5);}
+.btn-primary{background:linear-gradient(135deg,var(--navy),var(--navy-mid));color:white;padding:14px 32px;border:none;border-radius:100px;font-weight:700;font-size:15px;cursor:pointer;text-decoration:none;display:inline-block;transition:all 0.3s;box-shadow:0 8px 30px rgba(124,58,237,0.35);font-family:'Outfit',sans-serif;}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(124,58,237,0.5);}
 .btn-outline{border:2px solid rgba(255,255,255,0.4);color:var(--white);padding:14px 32px;border-radius:8px;font-weight:600;font-size:15px;cursor:pointer;text-decoration:none;display:inline-block;transition:all 0.3s;background:transparent;font-family:'Outfit',sans-serif;}
 .btn-outline:hover{border-color:var(--gold-light);color:var(--gold-light);}
 .hero-stats{display:flex;gap:48px;justify-content:center;margin-top:64px;animation:fadeUp 0.8s 0.5s both;}
@@ -62,10 +63,10 @@ section{padding:90px 5%;}
 .school-card-arrow{position:absolute;top:20px;right:20px;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;opacity:0;transition:all 0.3s;}
 .school-card:hover .school-card-arrow{opacity:1;transform:translateX(3px);}
 .school-card-arrow svg{width:16px;height:16px;stroke:white;}
-.card-navy .school-card-img{background:linear-gradient(135deg,var(--navy),var(--navy-light));}
-.card-green .school-card-img{background:linear-gradient(135deg,#1B6E4F,#2D8C6A);}
-.card-gold .school-card-img{background:linear-gradient(135deg,#8B5E00,var(--gold));}
-.card-teal .school-card-img{background:linear-gradient(135deg,#1A5276,#1F7EA3);}
+.card-navy .school-card-img{background:linear-gradient(135deg,#7c3aed,#a855f7);}
+.card-green .school-card-img{background:linear-gradient(135deg,#06b6d4,#0891b2);}
+.card-gold .school-card-img{background:linear-gradient(135deg,#f59e0b,#fbbf24);}
+.card-teal .school-card-img{background:linear-gradient(135deg,#8b5cf6,#a78bfa);}
 .card-navy .school-card-tag{background:rgba(13,27,62,0.08);color:var(--navy);}
 .card-green .school-card-tag{background:rgba(45,140,106,0.1);color:#1B6E4F;}
 .card-gold .school-card-tag{background:rgba(201,146,42,0.1);color:#8B5E00;}
@@ -85,7 +86,7 @@ section{padding:90px 5%;}
 .teachers-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:24px;max-width:1200px;margin:0 auto;}
 .teacher-card{background:var(--cream);border-radius:16px;padding:28px 20px;text-align:center;border:1px solid rgba(13,27,62,0.08);transition:all 0.3s;box-shadow:0 4px 16px rgba(13,27,62,0.05);}
 .teacher-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--gold);}
-.teacher-photo{width:90px;height:90px;border-radius:50%;margin:0 auto 16px;background:linear-gradient(135deg,var(--navy),var(--navy-light));display:flex;align-items:center;justify-content:center;font-size:30px;overflow:hidden;border:3px solid rgba(201,146,42,0.3);position:relative;}
+.teacher-photo{width:90px;height:90px;border-radius:50%;margin:0 auto 16px;background:linear-gradient(135deg,var(--navy),var(--navy-mid));display:flex;align-items:center;justify-content:center;font-size:30px;overflow:hidden;border:3px solid rgba(124,58,237,0.3);position:relative;}
 .teacher-photo img{width:100%;height:100%;object-fit:cover;border-radius:50%;position:absolute;inset:0;}
 .teacher-card h4{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--navy);margin-bottom:6px;}
 .teacher-card .t-role{font-size:13px;color:var(--gold);font-weight:600;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;}
@@ -108,15 +109,15 @@ section{padding:90px 5%;}
 .about-text p{font-size:16px;color:var(--text-mid);line-height:1.8;margin-bottom:20px;}
 .value-pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;}
 .pill{padding:8px 18px;background:var(--white);border:1px solid rgba(13,27,62,0.12);border-radius:30px;font-size:13px;font-weight:500;color:var(--navy);display:flex;align-items:center;gap:8px;}
-.pill span{width:8px;height:8px;border-radius:50%;background:var(--gold);display:inline-block;}
+.pill span{width:8px;height:8px;border-radius:50%;background:var(--navy);display:inline-block;}
 /* FEATURES */
 .features-section{background:var(--navy);}
 .features-section .section-header h2{color:var(--white);}
 .features-section .section-header p{color:rgba(255,255,255,0.6);}
 .features-section .section-tag{background:rgba(201,146,42,0.2);border-color:rgba(201,146,42,0.4);}
 .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;max-width:1200px;margin:0 auto;}
-.feature-card{padding:32px 24px;border-radius:16px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);transition:all 0.3s;}
-.feature-card:hover{background:rgba(201,146,42,0.08);border-color:rgba(201,146,42,0.3);transform:translateY(-4px);}
+.feature-card{padding:32px 24px;border-radius:16px;background:rgba(124,58,237,0.05);border:1px solid rgba(124,58,237,0.15);transition:all 0.3s;}
+.feature-card:hover{background:rgba(124,58,237,0.12);border-color:rgba(124,58,237,0.35);transform:translateY(-4px);}
 .feature-icon{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--gold),var(--gold-light));display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:20px;}
 .feature-card h4{font-size:17px;font-weight:600;color:var(--white);margin-bottom:10px;}
 .feature-card p{font-size:14px;color:rgba(255,255,255,0.55);line-height:1.6;}
@@ -146,7 +147,7 @@ section{padding:90px 5%;}
 /* FOOTER */
 footer{background:var(--navy);padding:60px 5% 32px;border-top:3px solid var(--gold);}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
-.footer-brand .emblem{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-light));display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:900;font-size:22px;color:var(--navy);margin-bottom:16px;}
+.footer-brand .emblem{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy-mid));display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:900;font-size:22px;color:white;margin-bottom:16px;}
 .footer-brand h3{font-family:'Playfair Display',serif;font-size:20px;color:var(--white);margin-bottom:12px;}
 .footer-brand p{font-size:14px;color:rgba(255,255,255,0.5);line-height:1.7;}
 .footer-col h4{font-size:13px;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold-light);margin-bottom:20px;font-weight:600;}
@@ -168,12 +169,13 @@ footer{background:var(--navy);padding:60px 5% 32px;border-top:3px solid var(--go
 .school-hero-content h1{font-family:'Playfair Display',serif;font-size:clamp(28px,5vw,54px);font-weight:900;color:var(--white);line-height:1.1;}
 .school-meta{display:flex;gap:20px;flex-wrap:wrap;margin-top:20px;}
 .school-meta-tag{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.75);font-size:14px;}
-.school-detail-body{padding:80px 5%;background:var(--cream);}
-.detail-grid{display:grid;grid-template-columns:2fr 1fr;gap:48px;max-width:1200px;margin:0 auto;}
-.detail-section{background:var(--white);border-radius:16px;padding:36px;margin-bottom:28px;border:1px solid rgba(13,27,62,0.06);}
-.detail-section h3{font-family:'Playfair Display',serif;font-size:22px;color:var(--navy);margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid rgba(13,27,62,0.08);}
-.detail-section p{font-size:15px;color:var(--text-mid);line-height:1.8;}
-.sidebar-card{background:var(--white);border-radius:16px;padding:28px;margin-bottom:24px;border:1px solid rgba(13,27,62,0.06);}
+.school-detail-body{padding:60px 5%;background:var(--cream);overflow-x:hidden;}
+.detail-grid{display:grid;grid-template-columns:2fr 1fr;gap:20px;max-width:1400px;margin:0 auto;width:100%;box-sizing:border-box;}
+@media(max-width:768px){.detail-grid{grid-template-columns:1fr;}}
+.detail-section{background:var(--white);border-radius:16px;padding:24px;margin-bottom:28px;border:1px solid rgba(13,27,62,0.06);overflow-x:hidden;word-wrap:break-word;}
+.detail-section h3{font-family:'Playfair Display',serif;font-size:22px;color:var(--navy);margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid rgba(13,27,62,0.08);word-wrap:break-word;}
+.detail-section p{font-size:15px;color:var(--text-mid);line-height:1.8;word-wrap:break-word;}
+.sidebar-card{background:var(--white);border-radius:16px;padding:28px;margin-bottom:24px;border:1px solid rgba(13,27,62,0.06);overflow-x:hidden;width:100%;box-sizing:border-box;}
 .sidebar-card h4{font-size:14px;text-transform:uppercase;letter-spacing:1px;color:var(--text-light);margin-bottom:16px;font-weight:600;}
 .info-row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(13,27,62,0.06);font-size:14px;}
 .info-row:last-child{border:none;}
@@ -183,7 +185,7 @@ footer{background:var(--navy);padding:60px 5% 32px;border-top:3px solid var(--go
 .admin-panel{display:none;position:fixed;inset:0;z-index:2000;background:rgba(10,20,50,0.92);backdrop-filter:blur(8px);overflow-y:auto;}
 .admin-panel.active{display:flex;align-items:flex-start;justify-content:center;padding:30px 20px;}
 .admin-container{background:var(--white);border-radius:20px;width:100%;max-width:900px;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,0.4);}
-.admin-header{background:linear-gradient(135deg,var(--navy),var(--navy-light));padding:28px 36px;display:flex;align-items:center;justify-content:space-between;border-bottom:3px solid var(--gold);}
+.admin-header{background:linear-gradient(135deg,var(--navy),var(--navy-mid));padding:28px 36px;display:flex;align-items:center;justify-content:space-between;border-bottom:3px solid var(--gold);}
 .admin-header h2{font-family:'Playfair Display',serif;font-size:24px;color:var(--white);}
 .admin-header p{font-size:13px;color:rgba(255,255,255,0.5);margin-top:4px;}
 .admin-close{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.1);border:none;color:white;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.2s;}
@@ -199,8 +201,8 @@ footer{background:var(--navy);padding:60px 5% 32px;border-top:3px solid var(--go
 .admin-form-group select,.admin-form-group textarea,.admin-form-group input{width:100%;padding:11px 14px;border:1.5px solid rgba(13,27,62,0.15);border-radius:8px;font-family:'Outfit',sans-serif;font-size:14px;color:var(--navy);background:var(--cream);outline:none;transition:border-color 0.2s;}
 .admin-form-group select:focus,.admin-form-group textarea:focus,.admin-form-group input:focus{border-color:var(--gold);}
 .admin-form-group textarea{min-height:120px;resize:vertical;}
-.admin-save-btn{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--navy);border:none;padding:12px 28px;border-radius:8px;font-weight:700;font-size:14px;cursor:pointer;font-family:'Outfit',sans-serif;transition:all 0.2s;}
-.admin-save-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,146,42,0.4);}
+.admin-save-btn{background:linear-gradient(135deg,var(--navy),var(--navy-mid));color:white;border:none;padding:12px 28px;border-radius:8px;font-weight:700;font-size:14px;cursor:pointer;font-family:'Outfit',sans-serif;transition:all 0.2s;}
+.admin-save-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(124,58,237,0.4);}
 .admin-notice{padding:12px 16px;border-radius:8px;background:rgba(45,140,106,0.1);border:1px solid rgba(45,140,106,0.3);color:#1B6E4F;font-size:14px;margin-bottom:20px;display:none;}
 .admin-notice.show{display:block;}
 .removable-item{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:var(--cream);border-radius:8px;margin-bottom:10px;font-size:14px;color:var(--navy);}
@@ -226,8 +228,8 @@ footer{background:var(--navy);padding:60px 5% 32px;border-top:3px solid var(--go
 .config-status{padding:10px 14px;border-radius:8px;font-size:13px;font-weight:600;margin-top:12px;}
 .config-status.ok{background:rgba(45,140,106,0.1);color:#1B6E4F;}
 .config-status.warn{background:rgba(201,146,42,0.1);color:#8B5E00;}
-.login-modal{display:none;position:fixed;inset:0;z-index:3000;background:rgba(10,20,50,0.95);align-items:center;justify-content:center;}
-.login-modal.active{display:flex;}
+.login-modal{display:none;position:fixed;inset:0;z-index:3000;background:rgba(5,4,10,0.96);align-items:center;justify-content:center;backdrop-filter:blur(8px);}
+.login-modal.active{display:flex !important;}
 .login-box{background:var(--white);border-radius:20px;padding:48px;max-width:400px;width:90%;box-shadow:0 40px 100px rgba(0,0,0,0.5);}
 .login-box .lock-icon{font-size:40px;text-align:center;margin-bottom:8px;}
 .login-box h2{font-family:'Playfair Display',serif;font-size:26px;color:var(--navy);text-align:center;margin-bottom:6px;}
@@ -235,8 +237,82 @@ footer{background:var(--navy);padding:60px 5% 32px;border-top:3px solid var(--go
 .login-error{color:#c0392b;font-size:13px;margin-top:10px;display:none;text-align:center;}
 .login-error.show{display:block;}
 .login-close{float:right;background:none;border:none;font-size:22px;cursor:pointer;color:var(--text-light);margin-top:-36px;}
-@media(max-width:900px){.about-grid,.contact-grid,.detail-grid{grid-template-columns:1fr;}.about-visual{height:300px;}.footer-grid{grid-template-columns:1fr 1fr;}.nav-links{display:none;}.hero-stats{gap:28px;}.director-card{flex-direction:column;text-align:center;}.form-row{grid-template-columns:1fr;}}
-@media(max-width:600px){.footer-grid{grid-template-columns:1fr;}.hero-stats{flex-direction:column;gap:16px;}nav{padding:0 4%;}}
+@media(max-width:700px){.about-grid,.contact-grid{grid-template-columns:1fr;}.about-visual{height:300px;}.footer-grid{grid-template-columns:1fr 1fr;}.nav-links{display:none;}.hero-stats{gap:28px;}.director-card{flex-direction:column;text-align:center;}.form-row{grid-template-columns:1fr;}.school-card{height:100%}.schools-grid{grid-template-columns:1fr}.detail-section{padding:20px;}.school-detail-body{padding:40px 5%;}}
+@media(max-width:600px){.footer-grid{grid-template-columns:1fr;}.hero-stats{flex-direction:column;gap:16px;}nav{padding:0 4%;}body{font-size:14px}.hero{min-height:90vh;padding-top:60px}.hero h1{font-size:clamp(28px,6vw,48px)}.hero p{font-size:15px}.section-header h2{font-size:clamp(22px,5vw,32px)}.hero-badge{font-size:11px;padding:5px 14px}.hero-cta{flex-direction:column}.btn-primary,.btn-outline{width:100%;padding:12px 24px;font-size:14px}.schools-grid{gap:16px}.school-card-body{padding:16px}.feature-card{padding:20px 16px}.teachers-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:16px}.teacher-card{padding:16px 12px}.director-card{padding:24px;gap:20px}.detail-grid{gap:24px}.contact-grid{gap:24px}.admin-tabs{gap:4px;flex-wrap:wrap}.admin-body{padding:20px}.admin-form-group input,.admin-form-group textarea,.admin-form-group select{font-size:16px}.nav-admin-btn{padding:8px 14px;font-size:16px;width:auto}.form-row{display:block}.admin-form-group{margin-bottom:16px}section{padding:60px 4%}nav{height:60px}body{overflow-x:hidden}.hero-stats{font-size:12px}.stat .num{font-size:24px}.admin-header{padding:20px 16px}.admin-container{border-radius:12px}h1{word-break:break-word}}
+/* 3D EFFECTS & ANIMATIONS */
+
+.hero{perspective:none;position:relative}
+.school-card{perspective:none;transition:all 0.4s cubic-bezier(0.175,0.885,0.32,1.275);transform-style:flat}
+.school-card:hover{transform:translateY(-8px);box-shadow:0 30px 60px rgba(124,58,237,0.2)}
+.feature-card{perspective:none;transform-style:flat;transition:all 0.35s ease}
+.feature-card:hover{transform:translateY(-8px);box-shadow:0 25px 50px rgba(124,58,237,0.2)}
+.teacher-card{perspective:none;transform-style:flat;transition:all 0.3s ease}
+.teacher-card:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(124,58,237,0.2)}
+.director-card{perspective:none;transform-style:flat;position:relative}
+.detail-section{perspective:800px;transition:all 0.3s ease}
+.detail-section:hover{box-shadow:0 20px 40px rgba(13,27,62,0.1)}
+/* PARALLAX EFFECT */
+.hero-pattern{animation:floatPattern 20s infinite linear}
+@keyframes floatPattern{0%{transform:translateY(0px) rotate(0deg)}50%{transform:translateY(-20px) rotate(180deg)}100%{transform:translateY(0px) rotate(360deg)}}
+.hero::before{animation:pulseGlow 8s infinite ease-in-out}
+@keyframes pulseGlow{0%,100%{opacity:0.8}50%{opacity:1.2}}
+.scroll-indicator{animation:bounce 2.5s infinite cubic-bezier(0.68,-0.55,0.265,1.55)}
+/* CARD FLIP EFFECT */
+.school-card-body{position:relative;transform-style:preserve-3d;transition:all 0.4s ease}
+.school-card:hover .school-card-body{transform:translateZ(5px)}
+/* BUTTON ANIMATIONS */
+.btn-primary,.btn-outline,.admin-save-btn{position:relative;overflow:hidden;transition:all 0.3s cubic-bezier(0.175,0.885,0.32,1.275)}
+.btn-primary::before,.btn-outline::before,.admin-save-btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:rgba(255,255,255,0.3);transform:skewX(-20deg);transition:left 0.5s}
+.btn-primary:hover::before,.btn-outline:hover::before,.admin-save-btn:hover::before{left:100%}
+/* FLOATING ELEMENTS */
+.school-icon-big{animation:float 3s ease-in-out infinite;transform-origin:center}
+@keyframes float{0%,100%{transform:translateY(0px) rotate(0deg)}50%{transform:translateY(-15px) rotate(5deg)}}
+.feature-icon{animation:float 4s ease-in-out infinite;animation-delay:var(--delay,0s)}
+.feature-card:nth-child(1) .feature-icon{--delay:0s}
+.feature-card:nth-child(2) .feature-icon{--delay:0.2s}
+.feature-card:nth-child(3) .feature-icon{--delay:0.4s}
+.feature-card:nth-child(4) .feature-icon{--delay:0.6s}
+.feature-card:nth-child(5) .feature-icon{--delay:0.8s}
+.feature-card:nth-child(6) .feature-icon{--delay:1s}
+/* ROTATING ELEMENTS */
+.nav-logo .emblem{animation:spinGlow 4s linear infinite}
+@keyframes spinGlow{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.footer-brand .emblem{animation:spinGlow 5s linear infinite}
+/* STAGGERED REVEAL ANIMATION */
+.school-card{animation:slideUp 0.6s ease-out backwards}
+.school-card:nth-child(1){animation-delay:0.1s}
+.school-card:nth-child(2){animation-delay:0.2s}
+.school-card:nth-child(3){animation-delay:0.3s}
+.school-card:nth-child(4){animation-delay:0.4s}
+.feature-card{animation:slideUp 0.6s ease-out backwards}
+.feature-card:nth-child(1){animation-delay:0s}
+.feature-card:nth-child(2){animation-delay:0.1s}
+.feature-card:nth-child(3){animation-delay:0.2s}
+.feature-card:nth-child(4){animation-delay:0.3s}
+.feature-card:nth-child(5){animation-delay:0.4s}
+.feature-card:nth-child(6){animation-delay:0.5s}
+@keyframes slideUp{from{opacity:0;transform:translateY(50px)}to{opacity:1;transform:translateY(0)}}
+/* GLOW EFFECTS */
+.school-card{box-shadow:0 4px 20px rgba(13,27,62,0.06),inset 0 1px 0 rgba(255,255,255,0.5)}
+.school-card:hover{box-shadow:0 30px 60px rgba(201,146,42,0.25),inset 0 1px 0 rgba(255,255,255,0.8)}
+.feature-card{background:linear-gradient(135deg,rgba(255,255,255,0.05) 0%,rgba(201,146,42,0.02) 100%)}
+/* DEPTH SHADOW */
+.director-card{box-shadow:0 20px 60px rgba(13,27,62,0.25),0 0 60px rgba(201,146,42,0.1)}
+.admin-container{box-shadow:0 40px 100px rgba(0,0,0,0.4),0 0 100px rgba(201,146,42,0.1)}
+/* TEXT GLOW */
+.hero h1{text-shadow:0 0 30px rgba(201,146,42,0.3),0 0 60px rgba(201,146,42,0.15)}
+.section-header h2{background:linear-gradient(135deg,var(--navy),var(--text-dark));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+/* HOVER GLOW ON TEXT */
+.nav-links a:hover{text-shadow:0 0 20px rgba(232,184,75,0.5)}
+/* INTERACTIVE ELEMENTS */
+input:focus,textarea:focus,select:focus{box-shadow:0 0 0 3px rgba(201,146,42,0.2),inset 0 1px 2px rgba(0,0,0,0.05)}
+/* SMOOTH SCROLLING */
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+/* 3D CARD ON DETAIL PAGE */
+.detail-section{border:1px solid rgba(201,146,42,0.1);background:linear-gradient(135deg,rgba(255,255,255,0.9) 0%,rgba(250,246,238,0.5) 100%)}
+.sidebar-card{border:1px solid rgba(201,146,42,0.15);background:linear-gradient(135deg,rgba(255,255,255,0.95) 0%,rgba(250,246,238,0.6) 100%);transition:all 0.3s ease}
+.sidebar-card:hover{transform:translateZ(10px);box-shadow:0 20px 40px rgba(13,27,62,0.1),inset 0 1px 0 rgba(201,146,42,0.2)}
+
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
@@ -249,12 +325,12 @@ footer{background:var(--navy);padding:60px 5% 32px;border-top:3px solid var(--go
   </a>
   <ul class="nav-links">
     <li><a href="#" onclick="showMain();return false">Home</a></li>
-    <li><a href="#schools">Our Schools</a></li>
-    <li><a href="#staff">Our Team</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#schools" onclick="showMain();setTimeout(()=>document.getElementById('schools').scrollIntoView({behavior:'smooth'}),100);return false">Our Schools</a></li>
+    <li><a href="#staff" onclick="showMain();setTimeout(()=>document.getElementById('staff').scrollIntoView({behavior:'smooth'}),100);return false">Our Team</a></li>
+    <li><a href="#about" onclick="showMain();setTimeout(()=>document.getElementById('about').scrollIntoView({behavior:'smooth'}),100);return false">About</a></li>
+    <li><a href="#contact" onclick="showMain();setTimeout(()=>document.getElementById('contact').scrollIntoView({behavior:'smooth'}),100);return false">Contact</a></li>
   </ul>
-  <button class="nav-admin-btn" onclick="openLogin()">&#9881; Admin</button>
+  <button class="nav-admin-btn" onclick="openLogin()">👤</button>
 </nav>
 
 <div class="main-content" id="mainContent">
@@ -262,7 +338,7 @@ footer{background:var(--navy);padding:60px 5% 32px;border-top:3px solid var(--go
   <section class="hero">
     <div class="hero-pattern"></div>
     <div class="hero-content">
-      <div class="hero-badge">&#10022; Est. 2000 &middot; Multan, Punjab</div>
+      <div class="hero-badge">&#10022; Budhla Sant &middot; Multan, Punjab</div>
       <h1>Aziz Group<span>of Schools</span></h1>
       <p>Nurturing young minds with quality education, moral values, and a vision for a brighter tomorrow &mdash; across four distinguished institutions.</p>
       <div class="hero-cta">
@@ -421,8 +497,8 @@ footer{background:var(--navy);padding:60px 5% 32px;border-top:3px solid var(--go
         <li><a href="#" onclick="showSchool('gpsmw');return false">GPS Munshi Wala</a></li>
       </ul></div>
       <div class="footer-col"><h4>Quick Links</h4><ul>
-        <li><a href="#about">About Us</a></li><li><a href="#staff">Our Team</a></li>
-        <li><a href="#contact">Contact</a></li><li><a href="#" onclick="openLogin();return false">Admin Panel</a></li>
+        <li><a href="#about" onclick="showMain();setTimeout(()=>document.getElementById('about').scrollIntoView({behavior:'smooth'}),100);return false">About Us</a></li><li><a href="#staff" onclick="showMain();setTimeout(()=>document.getElementById('staff').scrollIntoView({behavior:'smooth'}),100);return false">Our Team</a></li>
+        <li><a href="#contact" onclick="showMain();setTimeout(()=>document.getElementById('contact').scrollIntoView({behavior:'smooth'}),100);return false">Contact</a></li><li><a href="#" onclick="openLogin();return false">Admin Panel</a></li>
       </ul></div>
       <div class="footer-col"><h4>Contact</h4><ul>
         <li><a href="#">Multan, Punjab</a></li>
@@ -443,14 +519,14 @@ footer{background:var(--navy);padding:60px 5% 32px;border-top:3px solid var(--go
       <div class="school-meta"><span class="school-meta-tag">&#127979; Co-Educational</span><span class="school-meta-tag">&#128218; Nursery to Matriculation</span><span class="school-meta-tag">&#128205; Multan</span></div>
     </div>
   </div>
-  <div class="school-detail-body"><div class="detail-grid">
-    <div>
+  <div class="school-detail-body"><div class="detail-grid row">
+    <div class="col-lg-8 col-md-12">
       <div class="detail-section"><h3>About the School</h3><p id="apms-about">Aziz Public Model School is the flagship institution of the Aziz Group of Schools. It is a premier co-educational school offering education from Nursery through Matriculation. The school is committed to providing a nurturing, stimulating, and challenging academic environment that fosters intellectual curiosity and personal growth in every student.</p></div>
       <div class="detail-section"><h3>Academic Programs</h3><p id="apms-programs">We offer a comprehensive curriculum from Early Childhood Education through Matriculation, following the Punjab Curriculum and Textbook Board guidelines, enriched with additional learning programs to ensure academic excellence.</p></div>
       <div class="detail-section"><h3>Facilities &amp; Activities</h3><div id="apms-facilities-list"><div class="removable-item">&#128300; Science &amp; Computer Laboratories</div><div class="removable-item">&#128214; Well-stocked Library</div><div class="removable-item">&#9917; Sports Ground &amp; Gymnasium</div><div class="removable-item">&#127912; Arts &amp; Crafts Room</div><div class="removable-item">&#127942; Annual Sports Day &amp; Prize Distribution</div></div></div>
       <div class="detail-section"><h3>Faculty &amp; Staff</h3><div id="apms-faculty-list" class="teachers-grid"></div></div>
     </div>
-    <div>
+    <div class="col-lg-4 col-md-12">
       <div class="sidebar-card"><h4>School Info</h4><div class="info-row"><span class="label">Type</span><span class="value">Co-Educational</span></div><div class="info-row"><span class="label">Levels</span><span class="value">Nursery &ndash; Matric</span></div><div class="info-row"><span class="label">Medium</span><span class="value" id="apms-medium">English &amp; Urdu</span></div><div class="info-row"><span class="label">Location</span><span class="value">Multan</span></div></div>
       <div class="sidebar-card"><h4>Admissions</h4><p style="font-size:14px;color:var(--text-mid);line-height:1.7" id="apms-admissions">Admissions are open for all classes. Contact the school office for registration forms, fee structure, and interview schedules.</p><button class="btn-primary" style="margin-top:16px;width:100%" onclick="showMain();setTimeout(()=>document.getElementById('contact').scrollIntoView(),300)">Enquire Now</button></div>
     </div>
